@@ -1,9 +1,9 @@
 import { StatusBar } from 'expo-status-bar';
 import React, { useRef, useMemo, useState } from 'react';
 import { FlatList, StyleSheet, Text, View, SafeAreaView } from 'react-native';
-import { ListItem } from './components/ListItem';
+import ListItem from './components/ListItem';
 import { SAMPLE_DATA } from './assets/data/sampleData';
-import { Chart } from './components/Chart';
+import Chart from './components/Chart';
 
 import {
   BottomSheetModal,
@@ -30,7 +30,7 @@ export default function App() {
 
   const snapPoints = useMemo(() => ["50%"], []);
 
-  const openModal = item => {
+  const openModal = (item) => {
     setSelectedCoinData(item);
     bottomSheetModalRef.current.present();
   }

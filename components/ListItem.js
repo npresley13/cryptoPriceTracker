@@ -1,7 +1,7 @@
 import React from 'react';
 import { View, Text, StyleSheet, Image, TouchableOpacity } from 'react-native';
 
-export const ListItem = ({name, symbol, currentPrice, priceChangePercentage7d, logoUrl, onPress }) => {
+const ListItem = ({name, symbol, currentPrice, priceChangePercentage7d, logoUrl, onPress }) => {
     const priceChangeColor = priceChangePercentage7d > 0 ? '#34c759' : '#FF3B30';
     
     return (
@@ -59,3 +59,5 @@ const styles = StyleSheet.create({
         alignItems: "flex-end",
     }
 })
+
+export default ListItem
